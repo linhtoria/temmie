@@ -1,5 +1,5 @@
 CC = gcc
-OBJS = main.o affects.o
+OBJS = main.o blit.o util.o
 # CFLAGS = -c -O2 -Wall -DDEBUG_LEV
 CFLAGS = -c -O2 -Wall
 LIB = -lncurses
@@ -10,7 +10,9 @@ temmie: $(OBJS)
 
 main.o: main.c
 
-affects.o: affects.c
+blit.o: blit.c
+
+util.o: util.c
 
 clean:
 	rm -f ./*.o
